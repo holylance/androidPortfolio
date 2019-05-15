@@ -9,7 +9,8 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-
+    <activity android:name=".recycleview.ListItemActivity">
+    </activity>
     <activity
         android:name=".LauncherActivity"
         android:screenOrientation="portrait">
@@ -20,9 +21,9 @@
       </intent-filter>
     </activity>
     <activity
-        android:name=".FirstActivity"
+        android:name=".viewpager.ViewPagerActivity"
         android:screenOrientation="portrait"/>
-    <activity android:name=".RecycleViewBasicActivity"/>
+    <activity android:name=".recycleview.RecycleViewBasicActivity"/>
   </application>
 
 </manifest>

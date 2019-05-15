@@ -8,9 +8,8 @@ import android.content.Intent
 import android.support.constraint.ConstraintLayout
 import android.view.*
 import kotlinx.android.synthetic.main.activity_launcher.*
-import android.widget.RelativeLayout
-
-
+import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
+import com.example.androidportfolio.viewpager.ViewPagerActivity
 
 class LauncherActivity : AppCompatActivity() {
   companion object {
@@ -26,12 +25,12 @@ class LauncherActivity : AppCompatActivity() {
     // toach any screen go to total menu activity.
     launcherLayout.setOnTouchListener(object : OnTouchListener {
       override fun onTouch(v: View, event: MotionEvent): Boolean {
-        when (event?.action) {
-          MotionEvent.ACTION_DOWN -> {
-              val intent = LauncherActivity.newIntent(v.context)
-              startActivity(intent)
-            }
-        }
+        //when (event?.action) {
+        //  MotionEvent.ACTION_DOWN -> {
+        //      val intent = LauncherActivity.newIntent(v.context)
+        //      startActivity(intent)
+        //    }
+        //}
         return v.onTouchEvent(event)
       }
     })
@@ -63,7 +62,7 @@ class LauncherActivity : AppCompatActivity() {
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
     when(item.itemId) {
-      R.id.action_home -> startActivity(Intent(this, FirstActivity::class.java))
+      R.id.action_home -> startActivity(Intent(this, ViewPagerActivity::class.java))
       R.id.action_recycleview -> startActivity(Intent(this, RecycleViewBasicActivity::class.java))
     }
     return true
