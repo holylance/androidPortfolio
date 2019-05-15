@@ -29,7 +29,7 @@
       app:layout_constraintBottom_toTopOf="@+id/buttonDetail"/>
 
   <Button
-      android:text="Button"
+      android:text="Go Back"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:id="@+id/buttonDetail" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="161dp"
