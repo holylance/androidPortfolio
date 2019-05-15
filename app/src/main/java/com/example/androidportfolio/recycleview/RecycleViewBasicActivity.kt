@@ -1,11 +1,28 @@
-package com.example.androidportfolio
+package com.example.androidportfolio.recycleview
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import com.example.androidportfolio.R
 import kotlinx.android.synthetic.main.activity_recycle_view_basic.*
 
 class RecycleViewBasicActivity : AppCompatActivity() {
+  companion object {
+    fun newIntent(context: Context): Intent {
+      return Intent(context, ListItemActivity::class.java)
+    }
+  }
+
+  inner class ItemClickListener(
+    private val context: Context
+  ): RecycleViewBasicAdapter.OnItemClickListener {
+    override fun onItemClick(item: String) {
+      val intent = Intent(context, ListItemActivity::class.java)
+      startActivity(intent)
+    }
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -20,7 +37,7 @@ class RecycleViewBasicActivity : AppCompatActivity() {
     recyclerView.layoutManager = LinearLayoutManager(this)
 
     // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
-    val adapter = RecycleViewBasicAdapter(list)
+    val adapter = RecycleViewBasicAdapter(list, ItemClickListener(this))
     recyclerView.adapter = adapter
   }
 }

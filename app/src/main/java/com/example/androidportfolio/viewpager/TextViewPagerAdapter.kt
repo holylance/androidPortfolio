@@ -1,4 +1,4 @@
-package com.example.androidportfolio
+package com.example.androidportfolio.viewpager
 
 import android.support.v4.view.PagerAdapter
 import android.view.ViewGroup
@@ -6,6 +6,7 @@ import android.content.Context
 import android.widget.TextView
 import android.view.LayoutInflater
 import android.view.View
+import com.example.androidportfolio.R
 
 class TextViewPagerAdapter(
   private var mContext: Context
