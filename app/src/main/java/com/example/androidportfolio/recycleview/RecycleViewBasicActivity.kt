@@ -10,9 +10,7 @@ import kotlinx.android.synthetic.main.activity_recycle_view_basic.*
 
 class RecycleViewBasicActivity : AppCompatActivity() {
   companion object {
-    fun newIntent(context: Context): Intent {
-      return Intent(context, ListItemActivity::class.java)
-    }
+    const val strTextDetail = "textDetail"
   }
 
   inner class ItemClickListener(
@@ -20,6 +18,7 @@ class RecycleViewBasicActivity : AppCompatActivity() {
   ): RecycleViewBasicAdapter.OnItemClickListener {
     override fun onItemClick(item: String) {
       val intent = Intent(context, ListItemActivity::class.java)
+      intent.putExtra(strTextDetail, item)
       startActivity(intent)
     }
   }
