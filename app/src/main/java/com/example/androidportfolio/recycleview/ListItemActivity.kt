@@ -1,5 +1,7 @@
 package com.example.androidportfolio.recycleview
 
+import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidportfolio.R
@@ -13,6 +15,13 @@ class ListItemActivity : AppCompatActivity() {
 
     if (intent.hasExtra(RecycleViewBasicActivity.strTextDetail)) {
       textViewDetail.text = intent.getStringExtra(RecycleViewBasicActivity.strTextDetail)
+    }
+
+    buttonDetail.setOnClickListener {
+      val intent = Intent()
+      intent.putExtra("result", textViewDetail.text)
+      setResult(Activity.RESULT_OK, intent)
+      finish()
     }
   }
 }
