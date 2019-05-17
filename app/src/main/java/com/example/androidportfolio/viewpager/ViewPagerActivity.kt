@@ -1,11 +1,11 @@
 package com.example.androidportfolio.viewpager
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidportfolio.R
+import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_first.*
 
-class ViewPagerActivity : AppCompatActivity() {
+class ViewPagerActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -13,5 +13,7 @@ class ViewPagerActivity : AppCompatActivity() {
 
     val pagerAdapter = TextViewPagerAdapter(this)
     viewPager.adapter = pagerAdapter
+
+    setUp()
   }
 }

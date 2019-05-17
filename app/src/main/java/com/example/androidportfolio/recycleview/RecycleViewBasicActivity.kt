@@ -3,14 +3,14 @@ package com.example.androidportfolio.recycleview
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.example.androidportfolio.R
+import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_recycle_view_basic.*
 
-class RecycleViewBasicActivity : AppCompatActivity() {
+class RecycleViewBasicActivity : BaseActivity() {
   companion object {
     const val strTextDetail = "textDetail"
     const val nRequestTypeNoResult = 1000
@@ -41,6 +41,8 @@ class RecycleViewBasicActivity : AppCompatActivity() {
     // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
     val adapter = RecycleViewBasicAdapter(list, ItemClickListener(this))
     recyclerView.adapter = adapter
+
+    setUp()
   }
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

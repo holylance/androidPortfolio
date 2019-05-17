@@ -1,22 +1,13 @@
 package com.example.androidportfolio
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View.OnTouchListener
-import android.content.Intent
 import android.support.constraint.ConstraintLayout
+import android.view.View.OnTouchListener
 import android.view.*
+import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_launcher.*
-import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
-import com.example.androidportfolio.viewpager.ViewPagerActivity
 
-class LauncherActivity : AppCompatActivity() {
-  companion object {
-    fun newIntent(context: Context): Intent {
-      return Intent(context, RecycleViewBasicActivity::class.java)
-    }
-  }
+class LauncherActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -27,7 +18,7 @@ class LauncherActivity : AppCompatActivity() {
       override fun onTouch(v: View, event: MotionEvent): Boolean {
         //when (event?.action) {
         //  MotionEvent.ACTION_DOWN -> {
-        //      val intent = LauncherActivity.newIntent(v.context)
+        //      val intent = Intent(v.context, RecycleViewBasicActivity::class.java)
         //      startActivity(intent)
         //    }
         //}
@@ -51,20 +42,6 @@ class LauncherActivity : AppCompatActivity() {
       app_toolbar.layoutParams = parameter
     }
 
-    // set tool bar.
-    setSupportActionBar(app_toolbar)
-  }
-
-  override fun onCreateOptionsMenu(menu: Menu): Boolean {
-    menuInflater.inflate(R.menu.appbar_action, menu)
-    return true
-  }
-
-  override fun onOptionsItemSelected(item: MenuItem): Boolean {
-    when(item.itemId) {
-      R.id.action_home -> startActivity(Intent(this, ViewPagerActivity::class.java))
-      R.id.action_recycleview -> startActivity(Intent(this, RecycleViewBasicActivity::class.java))
-    }
-    return true
+    setUp()
   }
 }

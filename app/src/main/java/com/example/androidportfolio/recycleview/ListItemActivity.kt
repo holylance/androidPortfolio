@@ -2,12 +2,12 @@ package com.example.androidportfolio.recycleview
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidportfolio.R
+import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_list_item.*
 
-class ListItemActivity : AppCompatActivity() {
+class ListItemActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -23,5 +23,7 @@ class ListItemActivity : AppCompatActivity() {
       setResult(Activity.RESULT_OK, intent)
       finish()
     }
+
+    setUp()
   }
 }
