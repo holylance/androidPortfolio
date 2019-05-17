@@ -7,16 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".recycleview.ListItemActivity">
 
+  <android.support.v7.widget.Toolbar
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="?attr/colorPrimary"
+      android:id="@+id/app_toolbar"
+      android:layout_marginBottom="502dp" app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/buttonDetail" app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
   <ImageView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       tools:src="@tools:sample/avatars[0]"
       android:id="@+id/imageViewDetail"
-      app:layout_constraintTop_toTopOf="parent"
-      android:layout_marginTop="97dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="141dp"
-      android:layout_marginStart="141dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="142dp"
-      android:layout_marginRight="142dp" android:layout_marginBottom="39dp"
-      app:layout_constraintBottom_toTopOf="@+id/textViewDetail" app:srcCompat="@mipmap/ic_launcher"/>
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginLeft="141dp"
+      android:layout_marginStart="141dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginEnd="142dp"
+      android:layout_marginRight="142dp"
+      android:layout_marginBottom="39dp"
+      app:layout_constraintBottom_toTopOf="@+id/textViewDetail"
+      app:srcCompat="@mipmap/ic_launcher"/>
 
   <TextView
       android:text="TextView"
@@ -35,5 +48,5 @@
       android:id="@+id/buttonDetail" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="161dp"
       android:layout_marginStart="161dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="162dp"
       android:layout_marginRight="162dp" android:layout_marginBottom="125dp"
-      app:layout_constraintBottom_toBottomOf="parent"/>
+      app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/app_toolbar"/>
 </android.support.constraint.ConstraintLayout>
