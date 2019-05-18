@@ -25,5 +25,7 @@ class ListItemActivity : BaseActivity() {
     }
 
     setUp()
+    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    //supportActionBar?.setDisplayShowHomeEnabled(true)
   }
 }
