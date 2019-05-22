@@ -16,7 +16,7 @@
       android:id="@+id/app_toolbar"/>
 
   <TextView
-      android:text="Jason's portfolio"
+      android:text="@string/app_title"
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:id="@+id/textView"
