@@ -7,25 +7,32 @@
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:roundIcon="@mipmap/ic_launcher_round"
+      android:screenOrientation="portrait"
       android:supportsRtl="true"
-      android:theme="@style/AppTheme"
-      android:screenOrientation="portrait">
+      android:theme="@style/AppTheme">
     <activity
-        android:name=".recycleview.ListItemActivity"/>
-    <activity
-        android:name=".LauncherActivity">
+        android:name=".LauncherActivity"
+        android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
     <activity
         android:name=".viewpager.ViewPagerActivity"
+        android:screenOrientation="portrait"
         android:launchMode="singleTop"/>
     <activity
         android:name=".recycleview.RecycleViewBasicActivity"
+        android:screenOrientation="portrait"
         android:launchMode="singleTop"/>
+    <activity
+        android:name=".InstanceStateAndKeyboardActivity"
+        android:screenOrientation="portrait"
+        android:launchMode="singleTop"/>
+    <activity
+        android:name=".recycleview.ListItemActivity"
+        android:screenOrientation="portrait"/>
   </application>
 
 </manifest>

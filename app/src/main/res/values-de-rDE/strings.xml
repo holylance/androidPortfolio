@@ -3,4 +3,8 @@
   <string name="app_name">AndroidPortfolio</string>
   <string name="app_title">Jasons Portfolio</string>
   <string name="go_back">Geh zurück</string>
+  <string name="instance_state_edit_hint">Dies ist ein Hinweis</string>
+  <string name="instance_state_button">Plus zählen</string>
+  <string name="app_bar_home">Zuhause</string>
+  <string name="instance_state_desc">Diese Aktivität legt den Instanzstatus fest.</string>
 </resources>

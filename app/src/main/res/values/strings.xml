@@ -3,4 +3,12 @@
   <string name="app_title">Jason\'s portfolio</string>
   <string name="text_view" translatable="false">TextView</string>
   <string name="go_back">Go back</string>
+  <string name="instance_state_edit_hint">This is a hint</string>
+  <string name="instance_state_button">Plus count</string>
+  <string name="app_bar_home">Home</string>
+  <string name="app_bar_recycle_view" translatable="false">RecycleView</string>
+  <string name="app_bar_instance_state" translatable="false">InstanceState</string>
+  <string name="instance_state_desc">This activity set instance state. So if you push the home button and go to other
+    apps and return it, the count number and text which you input on edittext have remained.
+  </string>
 </resources>

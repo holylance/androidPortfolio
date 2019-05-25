@@ -12,9 +12,9 @@ class TextViewPagerAdapter(
   private var mContext: Context
 ): PagerAdapter() {
   override fun instantiateItem(container: ViewGroup, position: Int): Any {
-    var view: View? = null
+    val view: View?
 
-    val inflater = mContext!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    val inflater = mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     view = inflater.inflate(R.layout.page_v, container, false)
 
     val textView = view!!.findViewById(R.id.title) as TextView
