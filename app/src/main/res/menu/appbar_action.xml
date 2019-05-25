@@ -5,12 +5,19 @@
   <item
       android:id="@+id/action_home"
       android:icon="@drawable/ic_home"
-      android:title="Home"
+      android:title="@string/app_bar_home"
       app:showAsAction="always"/>
 
   <item
       android:id="@+id/action_recycleview"
       android:icon="@drawable/ic_view_list"
-      android:title="RecycleView"
+      android:title="@string/app_bar_recycle_view"
       app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_instance_state"
+      android:icon="@drawable/ic_instance_state"
+      android:title="@string/app_bar_instance_state"
+      app:showAsAction="ifRoom"
+      />
 </menu>
