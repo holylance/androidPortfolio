@@ -2,9 +2,9 @@ package com.example.androidportfolio
 
 import android.os.Bundle
 import com.example.androidportfolio.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_instance_state_and_keyboard.*
+import kotlinx.android.synthetic.main.activity_instance_state.*
 
-class InstanceStateAndKeyboardActivity : BaseActivity() {
+class InstanceStateActivity : BaseActivity() {
   companion object {
     private const val KEY_COUNT: String = "count"
     private const val KEY_EDIT: String = "edit"
@@ -12,7 +12,7 @@ class InstanceStateAndKeyboardActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_instance_state_and_keyboard)
+    setContentView(R.layout.activity_instance_state)
 
     // init text.
     text_view_count.text = "0"

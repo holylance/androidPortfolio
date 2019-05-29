@@ -5,7 +5,7 @@ import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.androidportfolio.InstanceStateAndKeyboardActivity
+import com.example.androidportfolio.InstanceStateActivity
 import com.example.androidportfolio.R
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.viewpager.ViewPagerActivity
@@ -29,7 +29,7 @@ open class BaseActivity: AppCompatActivity() {
       android.R.id.home -> finish() // back button in menu.
       R.id.action_home -> startActivity(Intent(this, ViewPagerActivity::class.java))
       R.id.action_recycleview -> startActivity(Intent(this, RecycleViewBasicActivity::class.java))
-      R.id.action_instance_state -> startActivity(Intent(this, InstanceStateAndKeyboardActivity::class.java))
+      R.id.action_instance_state -> startActivity(Intent(this, InstanceStateActivity::class.java))
     }
     return true
   }
