@@ -8,6 +8,7 @@ import android.view.MenuItem
 import com.example.androidportfolio.InstanceStateActivity
 import com.example.androidportfolio.R
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
+import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
 import com.example.androidportfolio.viewpager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_launcher.*
 
@@ -30,6 +31,7 @@ open class BaseActivity: AppCompatActivity() {
       R.id.action_home -> startActivity(Intent(this, ViewPagerActivity::class.java))
       R.id.action_recycleview -> startActivity(Intent(this, RecycleViewBasicActivity::class.java))
       R.id.action_instance_state -> startActivity(Intent(this, InstanceStateActivity::class.java))
+      R.id.action_scroll_view_with_keyboard -> startActivity(Intent(this, ScrollviewWithKeyboardActivity::class.java))
     }
     return true
   }

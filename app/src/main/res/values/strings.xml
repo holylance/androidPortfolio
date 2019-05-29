@@ -1,14 +1,21 @@
 <resources>
-  <string name="app_name">AndroidPortfolio</string>
+  <string name="app_name" translatable="false">AndroidPortfolio</string>
   <string name="app_title">Jason\'s portfolio</string>
   <string name="text_view" translatable="false">TextView</string>
   <string name="go_back">Go back</string>
-  <string name="instance_state_edit_hint">This is a hint</string>
-  <string name="instance_state_button">Plus count</string>
+  <string name="edit_hint">This is a hint</string>
+  <string name="plus_button">Plus count</string>
   <string name="app_bar_home">Home</string>
   <string name="app_bar_recycle_view" translatable="false">RecycleView</string>
   <string name="app_bar_instance_state" translatable="false">InstanceState</string>
-  <string name="instance_state_desc">This activity set instance state. So if you push the home button and go to other
+  <string name="desc_instance_state">This activity set instance state. So if you push the home button and go to other
     apps and return it, the count number and text which you input on edittext have remained.
   </string>
+  <string name="button">button</string>
+  <string name="desc_scrollview_with_keyboard">I input keyboardUtil class. If you touch an editText, a
+    keyboard view covers button usually. But The layout id scrolled and you can see button because I added the keyboard
+    utility.
+  </string>
+  <string name="app_bar_scroll_view_with_keyboard" translatable="false">ScrollViewWithKeyboard</string>
+  <string name="desc_dummy_text_to_scroll">You can add more views here. This textView is here for scroll more.</string>
 </resources>

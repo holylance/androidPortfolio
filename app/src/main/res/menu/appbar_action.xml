@@ -18,6 +18,11 @@
       android:id="@+id/action_instance_state"
       android:icon="@drawable/ic_instance_state"
       android:title="@string/app_bar_instance_state"
-      app:showAsAction="ifRoom"
-      />
+      app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_scroll_view_with_keyboard"
+      android:icon="@drawable/ic_scroll_view_with_keyboard"
+      android:title="@string/app_bar_scroll_view_with_keyboard"
+      app:showAsAction="ifRoom"/>
 </menu>
