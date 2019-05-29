@@ -27,7 +27,7 @@
         android:screenOrientation="portrait"
         android:launchMode="singleTop"/>
     <activity
-        android:name=".InstanceStateAndKeyboardActivity"
+        android:name=".InstanceStateActivity"
         android:screenOrientation="portrait"
         android:launchMode="singleTop"/>
     <activity
