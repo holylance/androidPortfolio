@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".scrollviewwithkeyboard.ScrollviewWithKeyboardActivity">
+
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:id="@+id/app_toolbar"/>
+
+  <ScrollView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/sv_root"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/desc_scrollview_with_keyboard"
+          android:maxLines="6"
+          android:textSize="20sp"
+          android:layout_margin="10dp"/>
+
+      <ImageView
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_marginTop="40dp"
+          android:src="@mipmap/ic_launcher" />
+
+      <EditText
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:hint="@string/edit_hint"
+          android:inputType="text"
+          android:lines="1"
+          android:textSize="24sp" />
+
+      <Button
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="3dp"
+          android:text="@string/button" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/desc_dummy_text_to_scroll"
+          android:maxLines="3"
+          android:textSize="20sp"
+          android:layout_margin="10dp"/>
+
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

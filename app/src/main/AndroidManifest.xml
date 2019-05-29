@@ -15,24 +15,30 @@
         android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
     <activity
         android:name=".viewpager.ViewPagerActivity"
-        android:screenOrientation="portrait"
-        android:launchMode="singleTop"/>
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"/>
     <activity
         android:name=".recycleview.RecycleViewBasicActivity"
-        android:screenOrientation="portrait"
-        android:launchMode="singleTop"/>
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"/>
     <activity
         android:name=".InstanceStateActivity"
-        android:screenOrientation="portrait"
-        android:launchMode="singleTop"/>
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"/>
     <activity
         android:name=".recycleview.ListItemActivity"
         android:screenOrientation="portrait"/>
+    <activity
+        android:name=".scrollviewwithkeyboard.ScrollviewWithKeyboardActivity"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateAlwaysHidden"/>
   </application>
 
 </manifest>
