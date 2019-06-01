@@ -20,6 +20,10 @@
       </intent-filter>
     </activity>
     <activity
+        android:name=".lobby.LobbyActivity"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"/>
+    <activity
         android:name=".viewpager.ViewPagerActivity"
         android:launchMode="singleTop"
         android:screenOrientation="portrait"/>
