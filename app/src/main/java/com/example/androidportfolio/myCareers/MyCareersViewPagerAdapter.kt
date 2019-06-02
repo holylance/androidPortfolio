@@ -1,4 +1,4 @@
-package com.example.androidportfolio.viewpager
+package com.example.androidportfolio.myCareers
 
 import android.support.v4.view.PagerAdapter
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.example.androidportfolio.R
 
-class TextViewPagerAdapter(
+class MyCareersViewPagerAdapter(
   private var mContext: Context
 ): PagerAdapter() {
   override fun instantiateItem(container: ViewGroup, position: Int): Any {

@@ -24,7 +24,7 @@
         android:launchMode="singleTop"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".viewpager.ViewPagerActivity"
+        android:name=".myCareers.MyCareersActivity"
         android:launchMode="singleTop"
         android:screenOrientation="portrait"/>
     <activity
