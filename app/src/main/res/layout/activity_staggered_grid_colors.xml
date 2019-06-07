@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:id="@+id/app_toolbar"/>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/staggered_grid_color"
+      android:scrollbars="vertical"
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"/>
+
+</LinearLayout>
