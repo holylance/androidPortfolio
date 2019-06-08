@@ -12,8 +12,7 @@
       android:id="@+id/action_my_careers"
       android:icon="@drawable/ic_my_careers"
       android:title="@string/app_bar_my_careers"
-      app:showAsAction="ifRoom"
-      />
+      app:showAsAction="ifRoom"/>
 
   <item
       android:id="@+id/action_recycleview"
@@ -31,5 +30,11 @@
       android:id="@+id/action_instance_state"
       android:icon="@drawable/ic_instance_state"
       android:title="@string/app_bar_instance_state"
+      app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_staggered_grid_colors"
+      android:icon="@drawable/ic_staggered_grid_colors"
+      android:title="@string/app_bar_staggered_grid_colors"
       app:showAsAction="ifRoom"/>
 </menu>

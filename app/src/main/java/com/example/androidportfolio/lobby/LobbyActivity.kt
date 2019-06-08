@@ -10,15 +10,19 @@ import com.example.androidportfolio.base.BaseActivity
 import com.example.androidportfolio.myCareers.MyCareersActivity
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
+import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActivity
 import kotlinx.android.synthetic.main.activity_lobby.*
 
 class LobbyActivity : BaseActivity() {
   companion object {
-    enum class ActivityType {
-      MyCareers,
-      RecycleView,
-      ScrollviewWithKeyboard,
-      InstanceStateActivity,
+    enum class ActivityType(
+      val typeName: String
+    ) {
+      MyCareers("MyCareers"),
+      RecycleViewBasic("RecycleViewBasic"),
+      ScrollviewWithKeyboard("ScrollviewWithKeyboard"),
+      InstanceState("InstanceState"),
+      StaggeredGridColors("StaggeredGridColors"),
     }
   }
 
@@ -26,12 +30,7 @@ class LobbyActivity : BaseActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_lobby)
 
-    val list = listOf(
-      "MyCareers",
-      "RecycleViewBasic",
-      "ScrollviewWithKeyboard",
-      "InstanceState"
-    )
+    val list = ActivityType.values().map { it.typeName }
 
     listCareer.layoutManager = LinearLayoutManager(this)
     val adapter = LobbyAdapter(list, ItemClickListener(this))
@@ -44,10 +43,11 @@ class LobbyActivity : BaseActivity() {
     private val context: Context
   ): LobbyAdapter.OnItemClickListener {
     override fun onItemClick(item: String) {
-      val intent = when(item) {
-        "RecycleViewBasic" -> Intent(context, RecycleViewBasicActivity::class.java)
-        "ScrollviewWithKeyboard" -> Intent(context, ScrollviewWithKeyboardActivity::class.java)
-        "InstanceState" -> Intent(context, InstanceStateActivity::class.java)
+      val intent = when(ActivityType.valueOf(item)) {
+        ActivityType.RecycleViewBasic -> Intent(context, RecycleViewBasicActivity::class.java)
+        ActivityType.ScrollviewWithKeyboard -> Intent(context, ScrollviewWithKeyboardActivity::class.java)
+        ActivityType.InstanceState -> Intent(context, InstanceStateActivity::class.java)
+        ActivityType.StaggeredGridColors -> Intent(context, StaggeredGridColorsActivity::class.java)
         else -> Intent(context, MyCareersActivity::class.java)
       }
       startActivity(intent)

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View.OnTouchListener
 import android.view.*
 import com.example.androidportfolio.lobby.LobbyActivity
-import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActivity
 import kotlinx.android.synthetic.main.activity_launcher.*
 
 class LauncherActivity : AppCompatActivity() {
@@ -20,7 +19,7 @@ class LauncherActivity : AppCompatActivity() {
       override fun onTouch(v: View, event: MotionEvent): Boolean {
         when (event.action) {
           MotionEvent.ACTION_DOWN -> {
-              val intent = Intent(v.context, StaggeredGridColorsActivity::class.java)
+              val intent = Intent(v.context, LobbyActivity::class.java)
               startActivity(intent)
             }
         }

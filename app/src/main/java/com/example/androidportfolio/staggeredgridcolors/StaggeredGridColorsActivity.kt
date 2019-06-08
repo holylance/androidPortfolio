@@ -13,20 +13,20 @@ class StaggeredGridColorsActivity : BaseActivity() {
     setContentView(R.layout.activity_staggered_grid_colors)
 
     val list = listOf(
-      "Red",
-      "Green",
-      "Blue",
-      "Yellow",
-      "Magenta",
-      "Cyan",
-      "Orange",
-      "Aqua",
-      "Azure",
-      "Beige",
-      "Bisque",
-      "Brown",
-      "Coral",
-      "Crimson"
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N"
     )
 
     val staggeredGridLayoutManager = StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL)
