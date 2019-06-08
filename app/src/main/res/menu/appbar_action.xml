@@ -9,9 +9,21 @@
       app:showAsAction="always"/>
 
   <item
+      android:id="@+id/action_my_careers"
+      android:icon="@drawable/ic_my_careers"
+      android:title="@string/app_bar_my_careers"
+      app:showAsAction="ifRoom"/>
+
+  <item
       android:id="@+id/action_recycleview"
       android:icon="@drawable/ic_view_list"
       android:title="@string/app_bar_recycle_view"
+      app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_scroll_view_with_keyboard"
+      android:icon="@drawable/ic_scroll_view_with_keyboard"
+      android:title="@string/app_bar_scroll_view_with_keyboard"
       app:showAsAction="ifRoom"/>
 
   <item
@@ -21,8 +33,8 @@
       app:showAsAction="ifRoom"/>
 
   <item
-      android:id="@+id/action_scroll_view_with_keyboard"
-      android:icon="@drawable/ic_scroll_view_with_keyboard"
-      android:title="@string/app_bar_scroll_view_with_keyboard"
+      android:id="@+id/action_staggered_grid_colors"
+      android:icon="@drawable/ic_staggered_grid_colors"
+      android:title="@string/app_bar_staggered_grid_colors"
       app:showAsAction="ifRoom"/>
 </menu>

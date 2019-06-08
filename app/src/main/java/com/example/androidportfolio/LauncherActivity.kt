@@ -2,13 +2,13 @@ package com.example.androidportfolio
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View.OnTouchListener
 import android.view.*
-import com.example.androidportfolio.base.BaseActivity
 import com.example.androidportfolio.lobby.LobbyActivity
 import kotlinx.android.synthetic.main.activity_launcher.*
 
-class LauncherActivity : BaseActivity() {
+class LauncherActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -17,7 +17,7 @@ class LauncherActivity : BaseActivity() {
     // toach any screen go to total menu activity.
     launcherLayout.setOnTouchListener(object : OnTouchListener {
       override fun onTouch(v: View, event: MotionEvent): Boolean {
-        when (event?.action) {
+        when (event.action) {
           MotionEvent.ACTION_DOWN -> {
               val intent = Intent(v.context, LobbyActivity::class.java)
               startActivity(intent)
@@ -26,7 +26,5 @@ class LauncherActivity : BaseActivity() {
         return v.onTouchEvent(event)
       }
     })
-
-    setUp()
   }
 }

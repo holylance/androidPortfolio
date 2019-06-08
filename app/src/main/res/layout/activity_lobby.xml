@@ -11,4 +11,11 @@
       android:background="?attr/colorPrimary"
       android:id="@+id/app_toolbar"/>
 
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/listCareer"
+      android:scrollbars="vertical"
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"/>
+
 </LinearLayout>
