@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.androidportfolio">
 
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
@@ -45,6 +48,10 @@
         android:windowSoftInputMode="stateAlwaysHidden"/>
     <activity
         android:name=".staggeredgridcolors.StaggeredGridColorsActivity"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".weatherHttpResopnse.WeatherHttpResponseActivity"
         android:launchMode="singleTop"
         android:screenOrientation="portrait"/>
   </application>

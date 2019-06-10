@@ -37,4 +37,10 @@
       android:icon="@drawable/ic_staggered_grid_colors"
       android:title="@string/app_bar_staggered_grid_colors"
       app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_weather_http_response"
+      android:icon="@drawable/ic_weather_http_response"
+      android:title="@string/app_bar_weather_http_response"
+      app:showAsAction="ifRoom"/>
 </menu>

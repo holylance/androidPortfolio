@@ -11,6 +11,7 @@ import com.example.androidportfolio.myCareers.MyCareersActivity
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
 import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActivity
+import com.example.androidportfolio.weatherHttpResopnse.WeatherHttpResponseActivity
 import kotlinx.android.synthetic.main.activity_lobby.*
 
 class LobbyActivity : BaseActivity() {
@@ -23,6 +24,7 @@ class LobbyActivity : BaseActivity() {
       ScrollviewWithKeyboard("ScrollviewWithKeyboard"),
       InstanceState("InstanceState"),
       StaggeredGridColors("StaggeredGridColors"),
+      WeatherHttpResponse("WeatherHttpResponse"),
     }
   }
 
@@ -48,6 +50,7 @@ class LobbyActivity : BaseActivity() {
         ActivityType.ScrollviewWithKeyboard -> Intent(context, ScrollviewWithKeyboardActivity::class.java)
         ActivityType.InstanceState -> Intent(context, InstanceStateActivity::class.java)
         ActivityType.StaggeredGridColors -> Intent(context, StaggeredGridColorsActivity::class.java)
+        Companion.ActivityType.WeatherHttpResponse -> Intent(context, WeatherHttpResponseActivity::class.java)
         else -> Intent(context, MyCareersActivity::class.java)
       }
       startActivity(intent)
