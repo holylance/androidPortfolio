@@ -12,6 +12,7 @@ import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
 import com.example.androidportfolio.myCareers.MyCareersActivity
 import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActivity
+import com.example.androidportfolio.weatherHttpResopnse.WeatherHttpResponseActivity
 import kotlinx.android.synthetic.main.activity_lobby.*
 
 open class BaseActivity: AppCompatActivity() {
@@ -36,6 +37,7 @@ open class BaseActivity: AppCompatActivity() {
       R.id.action_scroll_view_with_keyboard -> startActivity(Intent(this, ScrollviewWithKeyboardActivity::class.java))
       R.id.action_instance_state -> startActivity(Intent(this, InstanceStateActivity::class.java))
       R.id.action_staggered_grid_colors -> startActivity(Intent(this, StaggeredGridColorsActivity::class.java))
+      R.id.action_weather_http_response -> startActivity(Intent(this, WeatherHttpResponseActivity::class.java))
     }
     return true
   }

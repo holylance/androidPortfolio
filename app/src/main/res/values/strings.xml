@@ -20,4 +20,8 @@
   <string name="desc_dummy_text_to_scroll">You can add more views here. This textView is here for scroll more.</string>
   <string name="app_bar_my_careers">My Careers</string>
   <string name="app_bar_staggered_grid_colors" translatable="false">StaggeredGridColors</string>
+  <string name="app_bar_weather_http_response" translatable="false">Weather Http Response</string>
+  <string name="desc_weather_http_response">It sends an HTTP request to openweathermap.org API and gets a response from
+    the API. I use Retrofit2 and RXAndroid.
+  </string>
 </resources>

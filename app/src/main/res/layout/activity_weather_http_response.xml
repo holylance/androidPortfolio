@@ -12,10 +12,21 @@
       android:id="@+id/app_toolbar"/>
 
   <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/desc_weather_http_response"
+      android:maxLines="4"
+      android:textSize="20sp"
+      android:layout_margin="10dp"/>
+
+  <TextView
       android:text="@string/text_view"
-      android:layout_width="0dp"
+      android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1"
+      android:maxLines="10"
+      android:textSize="20sp"
+      android:layout_margin="10dp"
       android:id="@+id/weatherDetail"/>
 
 </LinearLayout>
