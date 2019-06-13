@@ -15,6 +15,6 @@
   </string>
   <string name="app_bar_my_careers">Meine Karrieren</string>
   <string name="desc_weather_http_response">Es sendet eine HTTP-Anfrage an die openweathermap.org-API und erhält eine
-    Antwort von der API. Ich benutze Retrofit2 und RXAndroid.
+    Antwort von der API. Ich benutze Retrofit2, RXKotlin und RXAndroid.
   </string>
 </resources>

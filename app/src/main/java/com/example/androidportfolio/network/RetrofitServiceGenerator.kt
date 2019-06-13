@@ -3,6 +3,7 @@ package com.example.androidportfolio.network
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 
 class RetrofitServiceGenerator {
   companion object {
@@ -11,6 +12,7 @@ class RetrofitServiceGenerator {
     private val httpClient = OkHttpClient.Builder()
     private val builder = Retrofit.Builder()
       .baseUrl(strURL)
+      .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
       .addConverterFactory(GsonConverterFactory.create())
       .client(httpClient.build())
 

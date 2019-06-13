@@ -1,6 +1,6 @@
 package com.example.androidportfolio.network
 
-import retrofit2.Call
+import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,5 +11,5 @@ interface WeatherService {
     apiKey: String,
     @Query("q")
     query: String
-  ): Call<WeatherData>
+  ): Observable<WeatherData>
 }

@@ -22,6 +22,6 @@
   <string name="app_bar_staggered_grid_colors" translatable="false">StaggeredGridColors</string>
   <string name="app_bar_weather_http_response" translatable="false">Weather Http Response</string>
   <string name="desc_weather_http_response">It sends an HTTP request to openweathermap.org API and gets a response from
-    the API. I use Retrofit2 and RXAndroid.
+    the API. I use Retrofit2, RXKotlin and RXAndroid.
   </string>
 </resources>
