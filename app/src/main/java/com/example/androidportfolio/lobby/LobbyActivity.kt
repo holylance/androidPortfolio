@@ -34,9 +34,9 @@ class LobbyActivity : BaseActivity() {
 
     val list = ActivityType.values().map { it.typeName }
 
-    listCareer.layoutManager = LinearLayoutManager(this)
+    listActivities.layoutManager = LinearLayoutManager(this)
     val adapter = LobbyAdapter(list, ItemClickListener(this))
-    listCareer.adapter = adapter
+    listActivities.adapter = adapter
 
     setUp()
   }
@@ -50,7 +50,7 @@ class LobbyActivity : BaseActivity() {
         ActivityType.ScrollviewWithKeyboard -> Intent(context, ScrollviewWithKeyboardActivity::class.java)
         ActivityType.InstanceState -> Intent(context, InstanceStateActivity::class.java)
         ActivityType.StaggeredGridColors -> Intent(context, StaggeredGridColorsActivity::class.java)
-        Companion.ActivityType.WeatherHttpResponse -> Intent(context, WeatherHttpResponseActivity::class.java)
+        ActivityType.WeatherHttpResponse -> Intent(context, WeatherHttpResponseActivity::class.java)
         else -> Intent(context, MyCareersActivity::class.java)
       }
       startActivity(intent)

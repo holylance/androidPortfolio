@@ -11,7 +11,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class LauncherActivityTest {
@@ -35,6 +34,6 @@ class LauncherActivityTest {
 
     // check Lobby activity.
     onView(withId(R.id.app_toolbar)).check(matches(isDisplayed()))
-    onView(withId(R.id.listCareer)).check(matches(isDisplayed()))
+    onView(withId(R.id.listActivities)).check(matches(isDisplayed()))
   }
 }
