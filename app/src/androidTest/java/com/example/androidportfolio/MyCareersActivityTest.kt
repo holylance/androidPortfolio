@@ -22,6 +22,5 @@ class MyCareersActivityTest {
   fun firstLayout() {
     onView(withId(R.id.app_toolbar)).check(matches(isDisplayed()))
     onView(withId(R.id.viewPager)).check(matches(isDisplayed()))
-    onView(withId(R.id.text1)).check(matches(isDisplayed()))
   }
 }
