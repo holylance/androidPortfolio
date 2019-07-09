@@ -28,7 +28,7 @@ class LobbyActivityTest {
     onView(withId(R.id.listActivities)).check(matches(isDisplayed()))
   }
 
-  // Please make some new test which check each list items.
+  // Check to click each list items.
   @Test
   fun pushFirstElementOnList() {
     onView(withId(R.id.listActivities))

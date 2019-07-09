@@ -1,6 +1,6 @@
 package com.example.androidportfolio
 
-import android.support.test.espresso.Espresso
+import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
 import android.support.test.espresso.matcher.ViewMatchers.withId
@@ -21,7 +21,7 @@ class ToolBarTest {
   @Test
   fun firstLayout() {
     // check tool bar in Lobby Activity.
-    Espresso.onView(withId(R.id.app_toolbar)).check(matches(isDisplayed()))
+    onView(withId(R.id.app_toolbar)).check(matches(isDisplayed()))
   }
 
   @Test
