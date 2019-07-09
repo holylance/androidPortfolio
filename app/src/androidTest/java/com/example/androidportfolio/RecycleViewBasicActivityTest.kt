@@ -13,7 +13,6 @@ import android.support.test.runner.AndroidJUnit4
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.recycleview.RecycleViewBasicAdapter
 import com.example.androidportfolio.util.ToastMatcher
-import org.hamcrest.Matchers.not
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -69,11 +68,10 @@ class RecycleViewBasicActivityTest {
     onView(withId(R.id.recyclerView))
       .perform(RecyclerViewActions.actionOnItemAtPosition<RecycleViewBasicAdapter.ViewHolder>(0, click()))
 
-    // click back button.
-    //onView(withId(android.R.id.home))
-    //  .check(matches(isDisplayed()))
-    //  .perform(click())
+    // click back button on toolBar.
+    onView(withContentDescription(R.string.abc_action_bar_up_description))
+      .perform(click())
 
-    //onView(withId(R.id.recyclerView)).check(matches(isDisplayed()))
+    onView(withId(R.id.recyclerView)).check(matches(isDisplayed()))
   }
 }
