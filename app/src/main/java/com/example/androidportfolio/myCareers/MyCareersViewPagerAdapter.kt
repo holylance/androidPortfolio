@@ -1,11 +1,11 @@
 package com.example.androidportfolio.myCareers
 
-import android.support.v4.view.PagerAdapter
 import android.view.ViewGroup
 import android.content.Context
 import android.widget.TextView
 import android.view.LayoutInflater
 import android.view.View
+import androidx.viewpager.widget.PagerAdapter
 import com.example.androidportfolio.R
 
 class MyCareersViewPagerAdapter(

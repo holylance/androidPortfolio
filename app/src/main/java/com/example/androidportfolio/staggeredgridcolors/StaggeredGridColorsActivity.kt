@@ -1,7 +1,7 @@
 package com.example.androidportfolio.staggeredgridcolors
 
 import android.os.Bundle
-import android.support.v7.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_staggered_grid_colors.*

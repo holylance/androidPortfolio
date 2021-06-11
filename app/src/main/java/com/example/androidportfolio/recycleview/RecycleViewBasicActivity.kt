@@ -4,8 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_recycle_view_basic.*
