@@ -2,9 +2,9 @@ package com.example.androidportfolio
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View.OnTouchListener
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import com.example.androidportfolio.lobby.LobbyActivity
 import kotlinx.android.synthetic.main.activity_launcher.*
 

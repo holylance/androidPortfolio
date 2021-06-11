@@ -2,9 +2,9 @@ package com.example.androidportfolio.base
 
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.example.androidportfolio.InstanceStateActivity
 import com.example.androidportfolio.R
 import com.example.androidportfolio.lobby.LobbyActivity
@@ -19,8 +19,8 @@ open class BaseActivity: AppCompatActivity() {
 
   protected fun setUp() {
     // set tool bar.
-    app_toolbar.setTitleTextColor(Color.WHITE)
-    setSupportActionBar(app_toolbar)
+    // app_toolbar.setTitleTextColor(Color.WHITE)
+    // setSupportActionBar(app_toolbar)
   }
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {

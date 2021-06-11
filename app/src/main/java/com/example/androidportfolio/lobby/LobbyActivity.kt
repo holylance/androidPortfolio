@@ -3,7 +3,7 @@ package com.example.androidportfolio.lobby
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidportfolio.InstanceStateActivity
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
