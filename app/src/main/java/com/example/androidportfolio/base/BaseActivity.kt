@@ -1,44 +1,50 @@
 package com.example.androidportfolio.base
 
-import android.content.Intent
-import android.graphics.Color
-import android.view.Menu
-import android.view.MenuItem
+import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
+import android.content.res.Configuration
+import android.os.Bundle
+import android.view.View
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidportfolio.InstanceStateActivity
-import com.example.androidportfolio.R
-import com.example.androidportfolio.lobby.LobbyActivity
-import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
-import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
-import com.example.androidportfolio.myCareers.MyCareersActivity
-import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActivity
-import com.example.androidportfolio.weatherHttpResopnse.WeatherHttpResponseActivity
-import kotlinx.android.synthetic.main.activity_lobby.*
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
 
-open class BaseActivity: AppCompatActivity() {
+abstract class BaseActivity(@LayoutRes layout: Int) : AppCompatActivity(layout) {
+    protected open val activityOptions = ActivityOptions()
 
-  protected fun setUp() {
-    // set tool bar.
-    // app_toolbar.setTitleTextColor(Color.WHITE)
-    // setSupportActionBar(app_toolbar)
-  }
+    private val compositeDisposable = CompositeDisposable()
 
-  override fun onCreateOptionsMenu(menu: Menu): Boolean {
-    menuInflater.inflate(R.menu.appbar_action, menu)
-    return true
-  }
-
-  override fun onOptionsItemSelected(item: MenuItem): Boolean {
-    when(item.itemId) {
-      android.R.id.home -> finish() // back button in menu.
-      R.id.action_home -> startActivity(Intent(this, LobbyActivity::class.java))
-      R.id.action_my_careers -> startActivity(Intent(this, MyCareersActivity::class.java))
-      R.id.action_recycleview -> startActivity(Intent(this, RecycleViewBasicActivity::class.java))
-      R.id.action_scroll_view_with_keyboard -> startActivity(Intent(this, ScrollviewWithKeyboardActivity::class.java))
-      R.id.action_instance_state -> startActivity(Intent(this, InstanceStateActivity::class.java))
-      R.id.action_staggered_grid_colors -> startActivity(Intent(this, StaggeredGridColorsActivity::class.java))
-      R.id.action_weather_http_response -> startActivity(Intent(this, WeatherHttpResponseActivity::class.java))
+    protected fun bind(disposable: Disposable) {
+        compositeDisposable.add(disposable)
     }
-    return true
-  }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        if (activityOptions.fullscreen) {
+            // Activities use fullscreen mode to allow Fragments occasionally draw under the status bar,
+            // and to make transitions between these fullscreen Fragments and normal Fragments fluid.
+            window.decorView.systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        }
+
+        // Change statusbar icons between day/night modes
+        window.decorView.apply {
+            val mode = resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)
+
+            systemUiVisibility = when (mode == Configuration.UI_MODE_NIGHT_YES) {
+                true -> systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()
+                false -> systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            }
+        }
+
+        super.onCreate(savedInstanceState)
+
+        @SuppressLint("SourceLockedOrientationActivity")
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+    }
+
+    protected data class ActivityOptions(
+        val fullscreen: Boolean = true
+    )
 }

@@ -3,17 +3,17 @@ package com.example.androidportfolio.myCareers
 import android.os.Bundle
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_view_pager.*
+import com.example.androidportfolio.databinding.ActivityViewPagerBinding
+import com.example.androidportfolio.util.viewBinding
 
-class MyCareersActivity : BaseActivity() {
+class MyCareersActivity : BaseActivity(R.layout.activity_view_pager) {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_view_pager)
+    private val binding by viewBinding(ActivityViewPagerBinding::bind)
 
-    val pagerAdapter = MyCareersViewPagerAdapter(this)
-    viewPager.adapter = pagerAdapter
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    setUp()
-  }
+        val pagerAdapter = MyCareersViewPagerAdapter(this)
+        binding.viewPager.adapter = pagerAdapter
+    }
 }

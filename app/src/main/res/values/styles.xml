@@ -3,10 +3,21 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlNormal">@color/colorBackButton</item>
+        <item name="colorPrimary">@color/control_primary</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+        <item name="colorAccent">@color/danger_background_primary</item>
+        <item name="colorControlNormal">@color/control_active</item>
+    </style>
+
+    <!-- Bottom navigation -->
+    <style name="Widget.BankingApp.BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/euclid_square_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.BankingApp.BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/euclid_square_medium</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>
