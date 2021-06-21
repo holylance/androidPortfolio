@@ -1,46 +1,48 @@
 package com.example.androidportfolio
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import com.example.androidportfolio.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_instance_state.*
+import com.example.androidportfolio.databinding.ActivityInstanceStateBinding
+import com.example.androidportfolio.util.viewBinding
 
-class InstanceStateActivity : BaseActivity() {
-  companion object {
-    private const val KEY_COUNT: String = "count"
-    private const val KEY_EDIT: String = "edit"
-  }
+class InstanceStateActivity : BaseActivity(R.layout.activity_instance_state) {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_instance_state)
+    private val binding by viewBinding(ActivityInstanceStateBinding::bind)
 
-    // init text.
-    text_view_count.text = "0"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    button_plus.setOnClickListener {
-      var nCount = text_view_count.text.toString().toInt()
-      nCount += 1
-      text_view_count.text = nCount.toString()
+        // init text.
+        binding.textViewCount.text = "0"
+
+        binding.buttonPlus.setOnClickListener {
+            var nCount = binding.textViewCount.text.toString().toInt()
+            nCount += 1
+          binding.textViewCount.text = nCount.toString()
+        }
     }
 
-    setUp()
-  }
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
 
-  override fun onSaveInstanceState(outState: Bundle?) {
-    super.onSaveInstanceState(outState)
-
-    outState?.let {
-      outState.putString(KEY_COUNT, text_view_count.text.toString())
-      outState.putString(KEY_EDIT, edit_instance_state.text.toString())
+        outState.let {
+            outState.putString(KEY_COUNT, binding.textViewCount.text.toString())
+            outState.putString(KEY_EDIT, binding.editInstanceState.text.toString())
+        }
     }
-  }
 
-  override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
-    super.onRestoreInstanceState(savedInstanceState)
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
 
-    savedInstanceState?.let {
-      text_view_count.text = savedInstanceState.getString(KEY_COUNT)
-      edit_instance_state.setText(savedInstanceState.getString(KEY_EDIT))
+        savedInstanceState?.let {
+            binding.textViewCount.text = savedInstanceState.getString(KEY_COUNT)
+            binding.editInstanceState.setText(savedInstanceState.getString(KEY_EDIT))
+        }
     }
-  }
+
+    companion object {
+        private const val KEY_COUNT: String = "count"
+        private const val KEY_EDIT: String = "edit"
+    }
 }

@@ -4,38 +4,39 @@ import android.os.Bundle
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_staggered_grid_colors.*
+import com.example.androidportfolio.databinding.ActivityStaggeredGridColorsBinding
+import com.example.androidportfolio.util.viewBinding
 
-class StaggeredGridColorsActivity : BaseActivity() {
+class StaggeredGridColorsActivity : BaseActivity(R.layout.activity_staggered_grid_colors) {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_staggered_grid_colors)
+    private val binding by viewBinding(ActivityStaggeredGridColorsBinding::bind)
 
-    val list = listOf(
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N"
-    )
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    val staggeredGridLayoutManager = StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL)
-    //staggeredGridLayoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
+        val list = listOf(
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N"
+        )
 
-    staggered_grid_color.layoutManager = staggeredGridLayoutManager
-    val adapter = StaggeredGridColorsAdapter(list)
-    staggered_grid_color.adapter = adapter
+        val staggeredGridLayoutManager =
+            StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL)
+        //staggeredGridLayoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
 
-    setUp()
-  }
+        binding.staggeredGridColor.layoutManager = staggeredGridLayoutManager
+        val adapter = StaggeredGridColorsAdapter(list)
+        binding.staggeredGridColor.adapter = adapter
+    }
 }

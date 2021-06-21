@@ -24,4 +24,5 @@
   <string name="desc_weather_http_response">It sends an HTTP request to openweathermap.org API and gets a response from
     the API. I use Retrofit2, RXKotlin and RXAndroid.
   </string>
+  <string name="app_bar_more">More</string>
 </resources>

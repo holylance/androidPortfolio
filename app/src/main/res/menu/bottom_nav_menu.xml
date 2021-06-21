@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/accounts_nav_graph"
+        android:icon="@drawable/ic_home"
+        android:title="@string/app_bar_home" />
+
+    <item
+        android:id="@+id/card_control_nav_graph"
+        android:icon="@drawable/ic_my_careers"
+        android:title="@string/app_bar_my_careers" />
+
+    <item
+        android:id="@+id/more_nav_graph"
+        android:icon="@drawable/ic_more"
+        android:title="@string/app_bar_more" />
+
+</menu>
