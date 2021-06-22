@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.androidportfolio.InstanceStateActivity
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
 import com.example.androidportfolio.databinding.ActivityLobbyBinding
@@ -42,7 +41,6 @@ class LobbyActivity : BaseActivity(R.layout.activity_lobby) {
                     context,
                     ScrollviewWithKeyboardActivity::class.java
                 )
-                ActivityType.InstanceState -> Intent(context, InstanceStateActivity::class.java)
                 ActivityType.StaggeredGridColors -> Intent(
                     context,
                     StaggeredGridColorsActivity::class.java
@@ -64,7 +62,6 @@ class LobbyActivity : BaseActivity(R.layout.activity_lobby) {
             MyCareers("MyCareers"),
             RecycleViewBasic("RecycleViewBasic"),
             ScrollviewWithKeyboard("ScrollviewWithKeyboard"),
-            InstanceState("InstanceState"),
             StaggeredGridColors("StaggeredGridColors"),
             WeatherHttpResponse("WeatherHttpResponse"),
         }
