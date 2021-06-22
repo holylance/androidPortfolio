@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lobby_nav_graph"
+    app:startDestination="@id/lobby_fragment">
+
+    <fragment
+        android:id="@+id/lobby_fragment"
+        android:name="com.example.androidportfolio.lobby.LobbyFragment"
+        android:label="LobbyFragment"
+        tools:layout="@layout/lobby_fragment">
+    </fragment>
+
+</navigation>

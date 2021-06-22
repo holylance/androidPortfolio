@@ -25,4 +25,5 @@
     the API. I use Retrofit2, RXKotlin and RXAndroid.
   </string>
   <string name="app_bar_more">More</string>
+  <string name="lobby_title" translatable="false">Lobby</string>
 </resources>

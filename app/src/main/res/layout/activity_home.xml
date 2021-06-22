@@ -1,42 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <!-- CoordinatorLayout as parent for swipable Snackbars -->
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_home"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/nav_view"
-        android:background="@color/background_secondary">
+        android:layout_alignParentTop="true"
+        app:defaultNavHost="true" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/nav_view"
-            app:defaultNavHost="true" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/background_navigation"
-        android:outlineAmbientShadowColor="@color/shadow"
-        android:outlineSpotShadowColor="@color/shadow"
-        app:itemIconTint="@color/text_tertiary"
-        app:itemTextAppearanceActive="@style/Widget.BankingApp.BottomNavigationView.Active"
-        app:itemTextAppearanceInactive="@style/Widget.BankingApp.BottomNavigationView"
-        app:itemTextColor="@color/text_tertiary"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu"
-        tools:targetApi="p" />
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -34,6 +34,6 @@ class LauncherActivityTest {
 
     // check Lobby activity.
     onView(withId(R.id.app_toolbar)).check(matches(isDisplayed()))
-    onView(withId(R.id.listActivities)).check(matches(isDisplayed()))
+    onView(withId(R.id.list_fragments)).check(matches(isDisplayed()))
   }
 }
