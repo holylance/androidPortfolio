@@ -3,10 +3,11 @@ package com.example.androidportfolio.lobby
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidportfolio.R
-import com.example.androidportfolio.base.BaseActivity
-import com.example.androidportfolio.databinding.ActivityLobbyBinding
+import com.example.androidportfolio.base.BaseFragment
+import com.example.androidportfolio.databinding.LobbyFragmentBinding
 import com.example.androidportfolio.myCareers.MyCareersActivity
 import com.example.androidportfolio.recycleview.RecycleViewBasicActivity
 import com.example.androidportfolio.scrollviewwithkeyboard.ScrollviewWithKeyboardActivity
@@ -14,18 +15,23 @@ import com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsActiv
 import com.example.androidportfolio.util.viewBinding
 import com.example.androidportfolio.weatherHttpResopnse.WeatherHttpResponseActivity
 
-class LobbyActivity : BaseActivity(R.layout.activity_lobby) {
+class LobbyFragment : BaseFragment(R.layout.lobby_fragment) {
 
-    private val binding by viewBinding(ActivityLobbyBinding::bind)
+    private val binding by viewBinding(LobbyFragmentBinding::bind)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val list = ActivityType.values().map { it.typeName }
 
-        binding.listActivities.layoutManager = LinearLayoutManager(this)
-        val adapter = LobbyAdapter(list, ItemClickListener(this))
-        binding.listActivities.adapter = adapter
+        binding.listFragments.layoutManager = LinearLayoutManager(activity)
+        val adapter = LobbyAdapter(list, ItemClickListener(requireContext()))
+        binding.listFragments.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        binding.listFragments.adapter = null
+        super.onDestroyView()
     }
 
     inner class ItemClickListener(
