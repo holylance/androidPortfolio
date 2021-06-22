@@ -35,10 +35,6 @@
         android:launchMode="singleTop"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".InstanceStateActivity"
-        android:launchMode="singleTop"
-        android:screenOrientation="portrait"/>
-    <activity
         android:name=".recycleview.ListItemActivity"
         android:screenOrientation="portrait"/>
     <activity
