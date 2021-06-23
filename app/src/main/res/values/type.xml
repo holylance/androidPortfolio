@@ -80,9 +80,21 @@
         <item name="android:lineSpacingMultiplier">1.17</item>
     </style>
 
+    <style name="TextAppearance.TableRowTitle" parent="TextAppearance.S">
+        <item name="android:fontFamily">@font/euclid_square_regular</item>
+        <item name="fontFamily">@font/euclid_square_regular</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
     <style name="TextAppearance.TableRowSubTitle" parent="TextAppearance.XS">
         <item name="android:fontFamily">@font/euclid_square_regular</item>
         <item name="fontFamily">@font/euclid_square_regular</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.BankingApp.ButtonMedium" parent="TextAppearance.S">
+        <item name="android:fontFamily">@font/euclid_square_medium</item>
+        <item name="fontFamily">@font/euclid_square_medium</item>
         <item name="android:letterSpacing">-0.01</item>
     </style>
 

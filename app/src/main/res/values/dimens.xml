@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spacing -->
+    <dimen name="spacing_zero">0dp</dimen>
+    <dimen name="spacing_3xs">2dp</dimen>
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_s">12dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">20dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+    <dimen name="spacing_3xl">48dp</dimen>
+    <dimen name="spacing_4xl">56dp</dimen>
+
+    <!-- Corner radius -->
+    <dimen name="corner_radius">@dimen/corner_radius_xs</dimen>
+    <dimen name="corner_radius_xxs">4dp</dimen>
+    <dimen name="corner_radius_xs">8dp</dimen>
+    <dimen name="corner_radius_s">12dp</dimen>
+    <dimen name="corner_radius_m">16dp</dimen>
+    <dimen name="corner_radius_l">20dp</dimen>
+
+    <!-- Loading indicator -->
+    <dimen name="loading_indicator_size">24dp</dimen>
+    <dimen name="progress_indicator_size">2dp</dimen>
+
+</resources>

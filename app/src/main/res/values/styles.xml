@@ -38,4 +38,17 @@
         <item name="subtitleTextAppearance">@style/TextAppearance.TableRowSubTitle</item>
     </style>
 
+    <!-- Progress indicator -->
+    <style name="Widget.BankingApp.ProgressIndicator.Circular" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTint">@color/control_primary</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+    </style>
+
+    <style name="Widget.BankingApp.ProgressIndicator.Linear" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTint">@color/control_primary</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+    </style>
+
 </resources>
