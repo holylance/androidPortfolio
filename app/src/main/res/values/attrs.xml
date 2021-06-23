@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ActionLabel">
+        <attr name="icon" format="reference" />
+        <attr name="text_icon" format="string" />
+        <attr name="text_icon_size" format="dimension" />
+        <attr name="text_icon_color" format="reference" />
+        <attr name="text_icon_background" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="switch_icon" format="reference" />
+        <attr name="action_mode" format="enum">
+            <enum name="mode_navigation" value="0" />
+            <enum name="mode_action" value="1" />
+            <enum name="mode_action_bold" value="2" />
+            <enum name="mode_switch" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>
