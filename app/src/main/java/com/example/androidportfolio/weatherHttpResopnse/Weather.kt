@@ -1,4 +1,4 @@
-package com.example.androidportfolio.network
+package com.example.androidportfolio.weatherHttpResopnse
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

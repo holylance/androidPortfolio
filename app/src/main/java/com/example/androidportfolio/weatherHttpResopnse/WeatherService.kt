@@ -1,4 +1,4 @@
-package com.example.androidportfolio.network
+package com.example.androidportfolio.weatherHttpResopnse
 
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
