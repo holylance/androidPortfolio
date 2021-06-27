@@ -5,8 +5,7 @@ import android.widget.TextView
 import com.example.androidportfolio.R
 import com.example.androidportfolio.base.BaseActivity
 import com.example.androidportfolio.databinding.ActivityWeatherHttpResponseBinding
-import com.example.androidportfolio.network.RetrofitServiceGenerator
-import com.example.androidportfolio.network.WeatherService
+import com.example.androidportfolio.util.network.RetrofitServiceGenerator
 import com.example.androidportfolio.util.viewBinding
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
