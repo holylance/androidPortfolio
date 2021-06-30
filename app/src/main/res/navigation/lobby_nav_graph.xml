@@ -10,6 +10,20 @@
         android:name="com.example.androidportfolio.lobby.LobbyFragment"
         android:label="LobbyFragment"
         tools:layout="@layout/lobby_fragment">
+
+        <action
+            android:id="@+id/to_my_careers_fragment"
+            app:destination="@id/my_careers_fragment"
+            app:launchSingleTop="true" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/my_careers_fragment"
+        android:name="com.example.androidportfolio.myCareers.MyCareersFragment"
+        android:label="MyCareersFragment"
+        tools:layout="@layout/my_careers_fragment" />
+
+
 
 </navigation>
