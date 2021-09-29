@@ -29,17 +29,6 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".scrollviewwithkeyboard.ScrollviewWithKeyboardActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-
-        <activity
-            android:name=".staggeredgridcolors.StaggeredGridColorsActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".weatherHttpResopnse.WeatherHttpResponseActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />

@@ -15,6 +15,12 @@ class LobbyViewModel : BaseViewModel() {
                 title = R.string.app_bar_my_careers,
                 subtitle = R.string.app_bar_my_careers,
                 action = Action.MY_CAREERS
+            ),
+            LobbyLabelItem(
+                icon = R.drawable.ic_staggered_grid_colors,
+                title = R.string.app_bar_staggered_grid_colors,
+                subtitle = R.string.app_bar_staggered_grid_colors,
+                action = Action.STAGGERED_GRID_COLOR
             )
         )
     }

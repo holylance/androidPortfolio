@@ -10,9 +10,8 @@ interface LobbyItem : ListItemModel {
     enum class Action {
         NONE,
         MY_CAREERS,
-        WEATHER_API_CLIENT,
-        SCROLL_VIEW_WITH_KEYBOARD,
-        STAGGERED_GRID_COLOR
+        STAGGERED_GRID_COLOR,
+        WEATHER_API_CLIENT
     }
 }
 

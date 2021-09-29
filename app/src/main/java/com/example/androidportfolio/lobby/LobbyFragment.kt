@@ -36,9 +36,8 @@ class LobbyFragment : BaseFragment(R.layout.lobby_fragment) {
     private fun onItemClick(data: LobbyItem) {
         when (data.action) {
             Action.MY_CAREERS -> safeNavigate(R.id.to_my_careers_fragment)
+            Action.STAGGERED_GRID_COLOR -> safeNavigate(R.id.to_staggered_grid_colors_fragment)
             Action.WEATHER_API_CLIENT -> Unit
-            Action.SCROLL_VIEW_WITH_KEYBOARD -> Unit
-            Action.STAGGERED_GRID_COLOR -> Unit
             else -> Unit
         }
     }
