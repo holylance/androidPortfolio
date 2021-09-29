@@ -5,14 +5,7 @@
   <string name="edit_hint">Dies ist ein Hinweis</string>
   <string name="plus_button">Plus zählen</string>
   <string name="app_bar_home">Zuhause</string>
-  <string name="desc_instance_state">Diese Aktivität legt den Instanzstatus fest.</string>
   <string name="button">Taste</string>
-  <string name="desc_scrollview_with_keyboard">Ich gebe die keyboardUtil-Klasse ein. Wenn Sie einen editText
-    berühren, wird normalerweise eine Cover-Schaltfläche für die Tastaturansicht angezeigt. Aber die Layout-ID ist
-    gescrollt und Sie können die Schaltfläche sehen, weil ich das Tastatur-Dienstprogramm hinzugefügt habe.
-  </string>
-  <string name="desc_dummy_text_to_scroll">Hier können Sie weitere Ansichten hinzufügen. Diese Textansicht dient zum Scrollen mehr.
-  </string>
   <string name="app_bar_my_careers">Meine Karrieren</string>
   <string name="desc_weather_http_response">Es sendet eine HTTP-Anfrage an die openweathermap.org-API und erhält eine
     Antwort von der API. Ich benutze Retrofit2, RXKotlin und RXAndroid.

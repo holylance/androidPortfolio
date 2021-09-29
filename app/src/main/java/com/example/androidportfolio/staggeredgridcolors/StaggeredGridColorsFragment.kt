@@ -1,18 +1,18 @@
 package com.example.androidportfolio.staggeredgridcolors
 
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidportfolio.R
-import com.example.androidportfolio.base.BaseActivity
-import com.example.androidportfolio.databinding.ActivityStaggeredGridColorsBinding
+import com.example.androidportfolio.base.BaseFragment
+import com.example.androidportfolio.databinding.StaggeredGirdColorsFragmentBinding
 import com.example.androidportfolio.util.viewBinding
 
-class StaggeredGridColorsActivity : BaseActivity(R.layout.activity_staggered_grid_colors) {
+class StaggeredGridColorsFragment : BaseFragment(R.layout.staggered_gird_colors_fragment) {
+    private val binding by viewBinding(StaggeredGirdColorsFragmentBinding::bind)
 
-    private val binding by viewBinding(ActivityStaggeredGridColorsBinding::bind)
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val list = listOf(
             "A",
@@ -38,5 +38,10 @@ class StaggeredGridColorsActivity : BaseActivity(R.layout.activity_staggered_gri
         binding.staggeredGridColor.layoutManager = staggeredGridLayoutManager
         val adapter = StaggeredGridColorsAdapter(list)
         binding.staggeredGridColor.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        binding.staggeredGridColor.adapter = null
+        super.onDestroyView()
     }
 }

@@ -16,6 +16,11 @@
             app:destination="@id/my_careers_fragment"
             app:launchSingleTop="true" />
 
+        <action
+            android:id="@+id/to_staggered_grid_colors_fragment"
+            app:destination="@id/staggered_grid_colors_fragment"
+            app:launchSingleTop="true" />
+
     </fragment>
 
     <fragment
@@ -24,6 +29,10 @@
         android:label="MyCareersFragment"
         tools:layout="@layout/my_careers_fragment" />
 
-
+    <fragment
+        android:id="@+id/staggered_grid_colors_fragment"
+        android:name="com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsFragment"
+        android:label="StaggeredGridColorsFragment"
+        tools:layout="@layout/staggered_gird_colors_fragment" />
 
 </navigation>
