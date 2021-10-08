@@ -21,6 +21,11 @@
             app:destination="@id/staggered_grid_colors_fragment"
             app:launchSingleTop="true" />
 
+        <action
+            android:id="@+id/to_weather_api_fragment"
+            app:destination="@id/weather_api_fragment"
+            app:launchSingleTop="true" />
+
     </fragment>
 
     <fragment
@@ -34,5 +39,11 @@
         android:name="com.example.androidportfolio.staggeredgridcolors.StaggeredGridColorsFragment"
         android:label="StaggeredGridColorsFragment"
         tools:layout="@layout/staggered_gird_colors_fragment" />
+
+    <fragment
+        android:id="@+id/weather_api_fragment"
+        android:name="com.example.androidportfolio.weatherapi.WeatherApiFragment"
+        android:label="WeatherApiFragment"
+        tools:layout="@layout/weather_api_fragment" />
 
 </navigation>

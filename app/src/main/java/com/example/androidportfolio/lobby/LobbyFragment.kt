@@ -37,7 +37,7 @@ class LobbyFragment : BaseFragment(R.layout.lobby_fragment) {
         when (data.action) {
             Action.MY_CAREERS -> safeNavigate(R.id.to_my_careers_fragment)
             Action.STAGGERED_GRID_COLOR -> safeNavigate(R.id.to_staggered_grid_colors_fragment)
-            Action.WEATHER_API_CLIENT -> Unit
+            Action.WEATHER_API_CLIENT -> safeNavigate(R.id.to_weather_api_fragment)
             else -> Unit
         }
     }

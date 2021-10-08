@@ -22,7 +22,7 @@
 
   <item
       android:id="@+id/action_weather_http_response"
-      android:icon="@drawable/ic_weather_http_response"
-      android:title="@string/app_bar_weather_http_response"
+      android:icon="@drawable/ic_weather_api"
+      android:title="@string/app_bar_weather_api"
       app:showAsAction="ifRoom"/>
 </menu>
