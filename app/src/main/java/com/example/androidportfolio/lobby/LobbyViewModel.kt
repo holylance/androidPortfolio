@@ -21,6 +21,12 @@ class LobbyViewModel : BaseViewModel() {
                 title = R.string.app_bar_staggered_grid_colors,
                 subtitle = R.string.app_bar_staggered_grid_colors,
                 action = Action.STAGGERED_GRID_COLOR
+            ),
+            LobbyLabelItem(
+                icon = R.drawable.ic_weather_api,
+                title = R.string.app_bar_weather_api,
+                subtitle = R.string.app_bar_weather_api,
+                action = Action.WEATHER_API_CLIENT
             )
         )
     }
